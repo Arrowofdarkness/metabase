@@ -100,7 +100,7 @@
           (log/debug (trs "MetaBot WebSocket is closed. Reconnecting now."))
           (connect-websocket!))
         (catch Throwable e
-          (log/error e (trs "Error connecting websocket:")))))))
+          (log/error (trs "Error connecting websocket:") (.getMessage e)))))))
 
 (defn start-websocket-monitor!
   "Start the WebSocket monitor thread. This thread periodically checks to make sure the WebSocket connection should be

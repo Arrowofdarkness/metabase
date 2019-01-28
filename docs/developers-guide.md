@@ -247,15 +247,18 @@ do this instead if you already have a Metabase uberjar (just make sure `plugins`
 
 ### Including driver source paths for development or other Leiningen tasks
 
-For development when running various Leiningen tasks you can add the `include-all-drivers` profile to merge the drivers' dependencies and source paths into the Metabase
+For REPL-based development or when running other Leiningen tasks you can add the `include-all-drivers` profile to merge the drivers' dependencies and source paths into the Metabase
 project:
 
 ```
-# Install dependencies
-lein with-profiles +include-all-drivers deps
+# Find out-of-date dependencies for the core Metabase project and all drivers
+# (Assuming you have the lein-ancient plugin in your ~/.lein/profiles.clj)
+lein with-profiles +include-all-drivers ancient
 ```
 
-This profile is added by default when running `lein repl`, tests, and linters.
+When developing with Emacs and CIDER sending the universal prefix argument to `cider-jack-in` (i.e. running it with `C-u M-x cider-jack-in`) will prompt you for the command it should use
+to start the NREPL process; you can add `with-profiles +include-all-drivers` to that command to include driver source paths, which will let you work on the core Metabase project and all of
+the subprojects from a single REPL. :sunglasses:
 
 #### Unit Tests / Linting
 
