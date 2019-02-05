@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1em 0 1em 1.5em;
+  padding: 0em 0 0em 1.5em;
 }
 :local .Text.dashboard-is-editing {
   padding: 2.8em 1.3em var(--text-card-padding) 1.3em;
