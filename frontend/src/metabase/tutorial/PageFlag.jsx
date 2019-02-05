@@ -26,7 +26,7 @@ export default class PageFlag extends Component {
           this.forceUpdate();
         }
       }
-    }, 100);
+    }, 1000);
   }
 
   componentWillUnmount() {

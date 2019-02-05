@@ -62,11 +62,15 @@
 
 .Dashboard.Dashboard--fullscreen .fullscreen-normal-text {
   color: var(--color-text-dark);
+  font-size: 18px;
+  line-height: 18px;
   transition: color 1s linear;
 }
 
 .Dashboard.Dashboard--night.Dashboard--fullscreen .fullscreen-night-text {
   color: color(var(--color-text-white) alpha(-14%));
+  font-size: 18px;
+  line-height: 18px;
   transition: color 1s linear;
 }
 
@@ -91,7 +95,7 @@
 }
 
 .DashboardGrid {
-  margin-top: 1em;
+  margin-top: 0em;
 }
 
 .DashCard {
@@ -318,6 +322,7 @@
 
 @media screen and (min-width: 1540px) {
   .Dashboard.Dashboard--fullscreen {
+    
     font-size: 1.4em;
   }
 }
